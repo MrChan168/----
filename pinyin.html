@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拼音学习助手 - 小学生拼音汉字学习App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+SC:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .chinese-title {
+            font-family: 'Ma Shan Zheng', cursive;
+        }
+    </style>
+</head>
+<body class="bg-yellow-50">
+    <!-- 产品原型展示 -->
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-4xl font-bold text-center text-indigo-600 mb-8 chinese-title">拼音学习助手</h1>
+        <p class="text-center text-gray-600 mb-12">专为小学生设计的拼音与汉字学习应用</p>
+
+        <!-- 启动页 -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold text-indigo-800 mb-4 border-b-2 border-indigo-200 pb-2">启动页面</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden max-w-sm mx-auto border-8 border-indigo-300">
+                <div class="bg-gradient-to-b from-indigo-400 to-purple-500 h-96 flex flex-col items-center justify-center p-8">
+                    <img src="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" alt="启动页面插图" class="w-48 h-48 rounded-full object-cover mb-8 border-4 border-white">
+                    <h1 class="text-4xl font-bold text-white chinese-title mb-2">拼音学习助手</h1>
+                    <p class="text-white text-center mb-6">跟着小兔兔一起学拼音</p>
+                    <button class="bg-yellow-400 text-indigo-900 font-bold py-3 px-8 rounded-full shadow-md hover:bg-yellow-300 transition duration-300">开始学习</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 首页 -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold text-indigo-800 mb-4 border-b-2 border-indigo-200 pb-2">首页</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden max-w-sm mx-auto border-8 border-indigo-300">
+                <div class="bg-indigo-100 p-4">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center">
+                            <img src="https://images.unsplash.com/photo-1590956468383-c16e816ac942?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=200" alt="用户头像" class="w-10 h-10 rounded-full">
+                            <div class="ml-2">
+                                <p class="font-bold text-indigo-800">小明</p>
+                                <p class="text-xs text-indigo-600">学习天数: 7天</p>
+                            </div>
+                        </div>
+                        <div class="bg-yellow-200 py-1 px-3 rounded-full flex items-center">
+                            <span class="text-yellow-700 font-bold mr-1">⭐ 128</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="bg-purple-100 rounded-lg p-4 mb-6">
+                        <h3 class="font-bold text-purple-800 mb-2">今日学习目标</h3>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-purple-600 h-2.5 rounded-full" style="width: 65%"></div>
+                        </div>
+                        <p class="text-xs text-right mt-1 text-purple-600">已完成 65%</p>
+                    </div>
+                    
+                    <h3 class="font-bold text-lg text-indigo-800 mb-4">学习模块</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-blue-100 rounded-lg p-4 text-center hover:bg-blue-200 transition-colors">
+                            <img src="https://images.unsplash.com/photo-1629196914, a-4626-9aa2-0a15f5d3863" alt="拼音基础" class="w-16 h-16 mx-auto mb-2">
+                            <p class="font-medium text-blue-800">拼音基础</p>
+                        </div>
+                        <div class="bg-green-100 rounded-lg p-4 text-center hover:bg-green-200 transition-colors">
+                            <img src="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=200" alt="汉字识读" class="w-16 h-16 mx-auto mb-2">
+                            <p class="font-medium text-green-800">汉字识读</p>
+                        </div>
+                        <div class="bg-yellow-100 rounded-lg p-4 text-center hover:bg-yellow-200 transition-colors">
+                            <img src="https://images.unsplash.com/photo-1528642474498-1af0c17fd8c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=200" alt="趣味游戏" class="w-16 h-16 mx-auto mb-2">
+                            <p class="font-medium text-yellow-800">趣味游戏</p>
+                        </div>
+                        <div class="bg-red-100 rounded-lg p-4 text-center hover:bg-red-200 transition-colors">
+                            <img src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=200" alt="听音练习" class="w-16 h-16 mx-auto mb-2">
+                            <p class="font-medium text-red-800">听音练习</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 拼音基础学习页 -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold text-indigo-800 mb-4 border-b-2 border-indigo-200 pb-2">拼音基础学习页</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden max-w-sm mx-auto border-8 border-indigo-300">
+                <div class="bg-blue-500 p-4 flex items-center">
+                    <button class="text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <h3 class="font-bold text-white text-center flex-1">声母学习</h3>
+                </div>
+                <div class="p-6">
+                    <div class="bg-blue-100 rounded-xl p-6 mb-6 flex flex-col items-center">
+                        <p class="text-6xl font-bold text-blue-600 mb-2">b</p>
+                        <audio controls class="w-full mb-4">
+                            <source src="#" type="audio/mpeg">
+                        </audio>
+                        <p class="text-gray-700 mb-4">嘴唇闭拢，然后轻轻张开，发出"b"的音。</p>
+                        <img src="https://images.unsplash.com/photo-1535572290543-960a8046f5af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="发音示范" class="w-32 h-32 object-cover rounded-full mb-4">
+                        <div class="grid grid-cols-2 gap-3 w-full">
+                            <div class="bg-white rounded-lg p-3 shadow flex items-center">
+                                <span class="text-3xl font-bold text-blue-500 mr-2">bā</span>
+                                <span class="text-gray-700">八</span>
+                            </div>
+                            <div class="bg-white rounded-lg p-3 shadow flex items-center">
+                                <span class="text-3xl font-bold text-blue-500 mr-2">bō</span>
+                                <span class="text-gray-700">波</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-between">
+                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2 px-4 rounded-lg">
+                            上一个
+                        </button>
+                        <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg">
+                            下一个
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 拼音练习页 -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold text-indigo-800 mb-4 border-b-2 border-indigo-200 pb-2">拼音练习页</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden max-w-sm mx-auto border-8 border-indigo-300">
+                <div class="bg-green-500 p-4 flex items-center">
+                    <button class="text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <h3 class="font-bold text-white text-center flex-1">拼音组合练习</h3>
+                </div>
+                <div class="p-6">
+                    <div class="bg-green-100 rounded-lg p-4 mb-6">
+                        <p class="text-sm text-green-800 mb-2">选择下列图片中物品的正确拼音:</p>
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=500" alt="苹果" class="w-full h-48 object-cover rounded-lg mb-4">
+                    </div>
+                    <div class="grid grid-cols-2 gap-3 mb-6">
+                        <button class="bg-white border-2 border-gray-200 hover:border-green-400 rounded-lg p-3 text-center font-bold text-gray-700">
+                            píng guǒ
+                        </button>
+                        <button class="bg-white border-2 border-gray-200 hover:border-green-400 rounded-lg p-3 text-center font-bold text-gray-700">
+                            pín guǒ
+                        </button>
+                        <button class="bg-white border-2 border-gray-200 hover:border-green-400 rounded-lg p-3 text-center font-bold text-gray-700">
+                            bǐng guǒ
+                        </button>
+                        <button class="bg-white border-2 border-gray-200 hover:border-green-400 rounded-lg p-3 text-center font-bold text-gray-700">
+                            píng gǒu
+                        </button>
+                    </div>
+                    <div class="flex justify-center">
+                        <button class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full">
+                            提交答案
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 趣味游戏页 -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold text-indigo-800 mb-4 border-b-2 border-indigo-200 pb-2">趣味游戏页</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden max-w-sm mx-auto border-8 border-indigo-300">
+                <div class="bg-yellow-500 p-4 flex items-center">
+                    <button class="text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <h3 class="font-bold text-white text-center flex-1">拼音连连看</h3>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between mb-4">
+                        <div class="bg-yellow-100 rounded-full py-1 px-4">
+                            <span class="text-yellow-800">得分: 120</span>
+                        </div>
+                        <div class="bg-yellow-100 rounded-full py-1 px-4">
+                            <span class="text-yellow-800">时间: 01:45</span>
+                        </div>
+                    </div>
+                    <div class="bg-yellow-50 rounded-lg p-4 mb-6">
+                        <div class="grid grid-cols-3 gap-2 mb-4">
+                            <div class="bg-white rounded-lg p-2 text-center shadow font-bold text-yellow-700">
+                                mā
+                            </div>
+                            <div class="bg-white rounded-lg p-2 text-center shadow font-bold text-yellow-700">
+                                nǐ
+                            </div>
+                            <div class="bg-white rounded-lg p-2 text-center shadow font-bold text-yellow-700">
+                                hǎo
+                            </div>
+                            <div class="bg-white rounded-lg p-2 text-center shadow">
+                                <img src="https://images.unsplash.com/photo-1577260534703-9aed12d6e8e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=200" alt="妈" class="w-full h-12 object-cover">
+                            </div>
+                            <div class="bg-white rounded-lg p-2 text-center shadow">
+                                <img src="https://images.unsplash.com/photo-1591035897819-f4bdf739f446?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=200" alt="你" class="w-full h-12 object-cover">
+                            </div>
+                            <div class="bg-white rounded-lg p-2 text-center shadow">
+                                <img src="https://images.unsplash.com/photo-1594380128949-48222d0a9299?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=200" alt="好" class="w-full h-12 object-cover">
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-4 text-center">将拼音与对应的汉字图片连接起来</p>
+                    <div class="flex justify-center">
+                        <button class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-6 rounded-full">
+                            下一关
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 个人进度页 -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold text-indigo-800 mb-4 border-b-2 border-indigo-200 pb-2">个人进度页</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden max-w-sm mx-auto border-8 border-indigo-300">
+                <div class="bg-purple-500 p-4 flex items-center">
+                    <button class="text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <h3 class="font-bold text-white text-center flex-1">我的学习进度</h3>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1590956468383-c16e816ac942?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=200" alt="用户头像" class="w-16 h-16 rounded-full mr-4">
+                        <div>
+                            <p class="font-bold text-gray-800">小明</p>
+                            <p class="text-sm text-gray-600">一年级</p>
+                            <div class="flex items-center">
+                                <div class="text-yellow-500 mr-1">⭐</div>
+                                <p class="text-sm text-gray-700">总积分: 358</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <h4 class="font-bold text-purple-800 mb-2">本周学习情况</h4>
+                        <div class="bg-purple-100 rounded-lg p-3">
+                            <div class="grid grid-cols-7 gap-1">
+                                <div class="bg-purple-300 rounded p-2 text-center">
+                                    <p class="text-xs text-purple-800">一</p>
+                                    <p class="text-xs font-bold text-purple-900">✓</p>
+                                </div>
+                                <div class="bg-purple-300 rounded p-2 text-center">
+                                    <p class="text-xs text-purple-800">二</p>
+                                    <p class="text-xs font-bold text-purple-900">✓</p>
+                                </div>
+                                <div class="bg-purple-300 rounded p-2 text-center">
+                                    <p class="text-xs text-purple-800">三</p>
+                                    <p class="text-xs font-bold text-purple-900">✓</p>
+                                </div>
+                                <div class="bg-purple-200 rounded p-2 text-center">
+                                    <p class="text-xs text-purple-800">四</p>
+                                    <p class="text-xs font-bold text-purple-900">✓</p>
+                                </div>
+                                <div class="bg-purple-200 rounded p-2 text-center">
+                                    <p class="text-xs text-purple-800">五</p>
+                                    <p class="text-xs font-bold text-purple-900">✓</p>
+                                </div>
+                                <div class="bg-purple-200 rounded p-2 text-center">
+                                    <p class="text-xs text-purple-800">六</p>
+                                    <p class="text-xs font-bold text-purple-900">✓</p>
+                                </div>
+                                <div class="bg-gray-200 rounded p-2 text-center">
+                                    <p class="text-xs text-gray-800">日</p>
+                                    <p class="text-xs font-bold text-gray-500">-</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <h4 class="font-bold text-purple-800 mb-2">学习模块完成度</h4>
+                        <div class="space-y-3">
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-gray-700">声母</span>
+                                    <span class="text-purple-700">100%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-purple-600 h-2 rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-gray-700">韵母</span>
+                                    <span class="text-purple-700">85%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-purple-600 h-2 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-gray-700">整体认读音节</span>
+                                    <span class="text-purple-700">50%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-purple-600 h-2 rounded-full" style="width: 50%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-gray-700">汉字识读</span>
+                                    <span class="text-purple-700">30%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-purple-600 h-2 rounded-full" style="width: 30%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="w-full bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 rounded-lg">
+                        查看详细报告
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 错题集页面 -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold text-indigo-800 mb-4 border-b-2 border-indigo-200 pb-2">错题集页面</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden max-w-sm mx-auto border-8 border-indigo-300">
+                <div class="bg-red-500 p-4 flex items-center">
+                    <button class="text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <h3 class="font-bold text-white text-center flex-1">我的错题本</h3>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between mb-4">
+                        <p class="text-gray-700">共有 <span class="font-bold text-red-600">8</span> 道错题</p>
+                        <button class="text-indigo-600 text-sm">全部复习</button>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm text-gray-500">拼音练习</span>
+                                <span class="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-full">2023.05.20</span>
+                            </div>
+                            <div class="mb-2">
+                                <p class="text-gray-800">选择"鸭子"的正确拼音：</p>
+                                <div class="flex items-start mt-2">
+                                    <div class="bg-red-100 rounded p-2 text-red-600 font-bold mr-2">
+                                        ✗ yā zī
+                                    </div>
+                                    <div class="bg-green-100 rounded p-2 text-green-600 font-bold">
+                                        ✓ yā zi
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="text-indigo-600 text-sm mt-2">重新练习</button>
+                        </div>
+                        
+                        <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm text-gray-500">汉字识读</span>
+                                <span class="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-full">2023.05.21</span>
+                            </div>
+                            <div class="mb-2">
+                                <p class="text-gray-800">选择"西瓜"的拼音：</p>
+                                <div class="flex items-start mt-2">
+                                    <div class="bg-red-100 rounded p-2 text-red-600 font-bold mr-2">
+                                        ✗ xī guā
+                                    </div>
+                                    <div class="bg-green-100 rounded p-2 text-green-600 font-bold">
+                                        ✓ xī gua
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="text-indigo-600 text-sm mt-2">重新练习</button>
+                        </div>
+                        
+                        <button class="w-full py-3 text-indigo-600 border border-indigo-200 rounded-lg text-center">
+                            查看更多错题
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 底部导航栏 -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold text-indigo-800 mb-4 border-b-2 border-indigo-200 pb-2">底部导航栏</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden max-w-sm mx-auto border-8 border-indigo-300">
+                <div class="p-4 flex justify-between items-center bg-white border-t border-gray-200">
+                    <div class="flex flex-col items-center">
+                        <div class="p-1 rounded-full bg-indigo-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                            </svg>
+                        </div>
+                        <span class="text-xs text-indigo-600 font-medium">首页</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="p-1 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                        </div>
+                        <span class="text-xs text-gray-500">学习</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="p-1 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <span class="text-xs text-gray-500">游戏</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="p-1 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            </svg>
+                        </div>
+                        <span class="text-xs text-gray-500">我的</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
